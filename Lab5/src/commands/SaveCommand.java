@@ -3,6 +3,9 @@ package commands;
 import exceptions.WrongAmountOfParametersException;
 import managers.CollectionManager;
 
+/**
+ * Command 'save'. Saves the collection to a file.
+ */
 public class SaveCommand extends AbstractCommand{
     private CollectionManager collectionManager;
 
@@ -11,6 +14,10 @@ public class SaveCommand extends AbstractCommand{
         this.collectionManager = collectionManager;
     }
 
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

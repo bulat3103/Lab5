@@ -5,9 +5,11 @@ import data.Coordinates;
 import data.Weapon;
 import exceptions.NotDeclaredValueException;
 
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+/**
+ * Asks a user a marine's value.
+ */
 public class SpaceMarineBuilder {
     private Scanner scanner;
 
@@ -15,14 +17,25 @@ public class SpaceMarineBuilder {
         this.scanner = scanner;
     }
 
+    /**
+     * Sets a scanner to scan user input.
+     * @param scanner Scanner to set.
+     */
     public void setScanner(Scanner scanner) {
         this.scanner = scanner;
     }
 
+    /**
+     * @return Scanner, which uses for user input.
+     */
     public Scanner getScanner() {
         return scanner;
     }
 
+    /**
+     * Asks a user the marine's name.
+     * @return Marine's name.
+     */
     public String askName() {
         String name;
         while (true) {
@@ -39,6 +52,10 @@ public class SpaceMarineBuilder {
         return name;
     }
 
+    /**
+     * Asks a user the marine's X coordinate.
+     * @return Marine's X coordinate.
+     */
     public int askX() {
         String strX;
         int x;
@@ -59,6 +76,10 @@ public class SpaceMarineBuilder {
         return x;
     }
 
+    /**
+     * Asks a user the marine's Y coordinate.
+     * @return Marine's Y coordinate.
+     */
     public Float askY() {
         String strY;
         float y;
@@ -79,6 +100,10 @@ public class SpaceMarineBuilder {
         return y;
     }
 
+    /**
+     * Asks a user the marine's coordinates.
+     * @return Marine's coordinates.
+     */
     public Coordinates askCoordinates() {
         int x;
         float y;
@@ -87,6 +112,10 @@ public class SpaceMarineBuilder {
         return new Coordinates(x, y);
     }
 
+    /**
+     * Asks a user the marine's health.
+     * @return Marine's health.
+     */
     public int askHealth() {
         String strHealth;
         int health;
@@ -107,6 +136,10 @@ public class SpaceMarineBuilder {
         return health;
     }
 
+    /**
+     * Asks a user the marine's heartCount.
+     * @return Marine's heartCount.
+     */
     public Integer askHeartCount() {
         String strHeartCount;
         int heartCount;
@@ -127,6 +160,10 @@ public class SpaceMarineBuilder {
         return heartCount;
     }
 
+    /**
+     * Asks a user the marine's achievements.
+     * @return Marine's achievements.
+     */
     public String askAchievements() {
         String achieve;
         while (true) {
@@ -143,6 +180,10 @@ public class SpaceMarineBuilder {
         return achieve;
     }
 
+    /**
+     * Asks a user the marine's weapon type.
+     * @return Marine's weapon type.
+     */
     public Weapon askWeapon() {
         String strWeapon;
         Weapon weapon;
@@ -161,10 +202,18 @@ public class SpaceMarineBuilder {
         return weapon;
     }
 
+    /**
+     * Asks a user the marine's chapter.
+     * @return Marine's chapter.
+     */
     public Chapter askChapter() {
         return new Chapter(askChapterName(), askChapterParentLegion());
     }
 
+    /**
+     * Asks a user the marine chapter's name.
+     * @return Chapter's name.
+     */
     public String askChapterName() {
         String name;
         while (true) {
@@ -181,6 +230,10 @@ public class SpaceMarineBuilder {
         return name;
     }
 
+    /**
+     * Asks a user the marine chapter's parentLegion.
+     * @return Chapter's parentLegion.
+     */
     public String askChapterParentLegion() {
         String parentLegion;
         while (true) {
@@ -193,6 +246,11 @@ public class SpaceMarineBuilder {
         return parentLegion;
     }
 
+    /**
+     * Asks a user a question.
+     * @return Answer (true/false).
+     * @param ask A question.
+     */
     public boolean askAboutChangingField(String ask) {
         String res = ask + " (+/-):";
         String answer;

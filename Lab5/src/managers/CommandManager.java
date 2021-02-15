@@ -5,6 +5,9 @@ import commands.AbstractCommand;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Operates the commands.
+ */
 public class CommandManager {
     private final int COMMAND_HISTORY_MAX_VALUE = 14;
 
@@ -62,6 +65,10 @@ public class CommandManager {
         commands.add(averageOfHeartCountCommand);
     }
 
+    /**
+     * Adds command to command history.
+     * @param commandToAdd Command to add.
+     */
     public void addToHistory(String commandToAdd) {
         for (AbstractCommand command : commands) {
             if (command.getName().split(" ")[0].equals(commandToAdd)) {
@@ -73,6 +80,11 @@ public class CommandManager {
         }
     }
 
+    /**
+     * Prints info about the all commands.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean help(String argument) {
         if (helpCommand.execute(argument)) {
             for (AbstractCommand command : commands) {
@@ -82,42 +94,92 @@ public class CommandManager {
         } else return false;
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean info(String argument) {
         return infoCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean show(String argument) {
         return showCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean insert(String argument) {
         return insertCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean update(String argument) {
         return updateCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean removeKey(String argument) {
         return removeKeyCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean clear(String argument) {
         return clearCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean save(String argument) {
         return saveCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean executeScript(String argument) {
         return executeScriptCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean removeGreater(String argument) {
         return removeGreaterCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean history(String argument) {
         if (historyCommand.execute(argument)) {
             if (commandHistory.length == 0) {
@@ -133,22 +195,47 @@ public class CommandManager {
         return false;
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean removeLowerKey(String argument) {
         return removeLowerKeyCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean removeAllByWeaponType(String argument) {
         return removeAllByWeaponTypeCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean averageOfHeartCount(String argument) {
         return averageOfHeartCountCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean sumOfHealth(String argument) {
         return sumOfHealthCommand.execute(argument);
     }
 
+    /**
+     * Executes needed command.
+     * @param argument Its argument.
+     * @return Command exit status.
+     */
     public boolean exit(String argument) {
         return exitCommand.execute(argument);
     }

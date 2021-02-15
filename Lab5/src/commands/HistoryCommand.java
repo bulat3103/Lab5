@@ -2,12 +2,19 @@ package commands;
 
 import exceptions.WrongAmountOfParametersException;
 
+/**
+ * Command 'history'. Checks for wrong arguments then do nothing.
+ */
 public class HistoryCommand extends AbstractCommand{
 
     public HistoryCommand() {
         super("history", "вывести историю использованных команд");
     }
 
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

@@ -3,6 +3,9 @@ package commands;
 import exceptions.WrongAmountOfParametersException;
 import managers.CollectionManager;
 
+/**
+ * Command 'clear'. Clears the collection.
+ */
 public class ClearCommand extends AbstractCommand{
     private CollectionManager collectionManager;
 
@@ -10,6 +13,11 @@ public class ClearCommand extends AbstractCommand{
         super("clear", "очистить коллекцию");
         this.collectionManager = collectionManager;
     }
+
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

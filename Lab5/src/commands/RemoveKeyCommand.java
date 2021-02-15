@@ -6,6 +6,9 @@ import exceptions.NotFoundMarineException;
 import exceptions.WrongAmountOfParametersException;
 import managers.CollectionManager;
 
+/**
+ * Command 'remove_key'. Removes an item from the collection by its key.
+ */
 public class RemoveKeyCommand extends AbstractCommand{
     private CollectionManager collectionManager;
 
@@ -13,6 +16,11 @@ public class RemoveKeyCommand extends AbstractCommand{
         super("remove_key", "удалить элемент из коллекции по его ключу");
         this.collectionManager = collectionManager;
     }
+
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+/**
+ * Operates command input.
+ */
 public class Console {
     private CommandManager commandManager;
     private SpaceMarineBuilder builder;
@@ -21,6 +24,9 @@ public class Console {
         this.builder = builder;
     }
 
+    /**
+     * Mode for catching commands from user input.
+     */
     public void interactiveMode() {
         String[] userCommand = {"", ""};
         int commandStatus;
@@ -37,6 +43,11 @@ public class Console {
         }
     }
 
+    /**
+     * Mode for catching commands from a script.
+     * @param fileName Its argument.
+     * @return Exit code.
+     */
     public int scriptMode(String fileName) {
         String[] userCommand = {"", ""};
         int commandStatus;
@@ -68,6 +79,11 @@ public class Console {
         return 1;
     }
 
+    /**
+     * Launchs the command.
+     * @param userCommand Command to launch.
+     * @return Exit code.
+     */
     private int executeCommand(String[] userCommand) {
         switch (userCommand[0]) {
             case "":

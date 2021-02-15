@@ -4,6 +4,9 @@ import exceptions.EmptyCollectionException;
 import exceptions.WrongAmountOfParametersException;
 import managers.CollectionManager;
 
+/**
+ * Command 'average_of_heart_count'. Outputs the average value of the heartCount field for all items in the collection.
+ */
 public class AverageOfHeartCountCommand extends AbstractCommand{
     private CollectionManager collectionManager;
 
@@ -12,6 +15,10 @@ public class AverageOfHeartCountCommand extends AbstractCommand{
         this.collectionManager = collectionManager;
     }
 
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

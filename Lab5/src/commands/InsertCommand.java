@@ -7,6 +7,9 @@ import managers.SpaceMarineBuilder;
 
 import java.time.LocalDateTime;
 
+/**
+ * Command 'insert'. Adds a new element to collection.
+ */
 public class InsertCommand extends AbstractCommand{
     private CollectionManager collectionManager;
     private SpaceMarineBuilder builder;
@@ -17,6 +20,10 @@ public class InsertCommand extends AbstractCommand{
         this.builder = builder;
     }
 
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

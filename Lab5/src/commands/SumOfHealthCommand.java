@@ -4,6 +4,9 @@ import exceptions.EmptyCollectionException;
 import exceptions.WrongAmountOfParametersException;
 import managers.CollectionManager;
 
+/**
+ * Command 'sum_of_health'. Prints the sum of health of all marines.
+ */
 public class SumOfHealthCommand extends AbstractCommand{
     private CollectionManager collectionManager;
 
@@ -12,6 +15,10 @@ public class SumOfHealthCommand extends AbstractCommand{
         this.collectionManager = collectionManager;
     }
 
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

@@ -3,6 +3,9 @@ package commands;
 import exceptions.WrongAmountOfParametersException;
 import managers.CollectionManager;
 
+/**
+ * Command 'show'. Shows information about all elements of the collection.
+ */
 public class ShowCommand extends AbstractCommand{
     private CollectionManager collectionManager;
 
@@ -11,6 +14,10 @@ public class ShowCommand extends AbstractCommand{
         this.collectionManager = collectionManager;
     }
 
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

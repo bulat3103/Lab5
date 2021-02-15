@@ -9,6 +9,9 @@ import managers.SpaceMarineBuilder;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * Command 'remove_greater'. Removes elements greater than user entered.
+ */
 public class RemoveGreaterCommand extends AbstractCommand{
     private CollectionManager collectionManager;
     private SpaceMarineBuilder builder;
@@ -19,6 +22,10 @@ public class RemoveGreaterCommand extends AbstractCommand{
         this.builder = builder;
     }
 
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

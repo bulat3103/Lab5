@@ -6,6 +6,9 @@ import managers.CollectionManager;
 
 import java.util.List;
 
+/**
+ * Command 'remove_lower_key'. Removes all items from the collection whose key is less than the specified one.
+ */
 public class RemoveLowerKeyCommand extends AbstractCommand{
     private CollectionManager collectionManager;
 
@@ -14,6 +17,10 @@ public class RemoveLowerKeyCommand extends AbstractCommand{
         this.collectionManager = collectionManager;
     }
 
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

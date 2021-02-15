@@ -7,6 +7,9 @@ import managers.CollectionManager;
 
 import java.util.List;
 
+/**
+ * Command 'remove_all_by_weapon_type'. Removes from the collection all items whose value of the weaponType field is equivalent to the specified one.
+ */
 public class RemoveAllByWeaponTypeCommand extends AbstractCommand{
     private CollectionManager collectionManager;
 
@@ -14,6 +17,11 @@ public class RemoveAllByWeaponTypeCommand extends AbstractCommand{
         super("remove_all_by_weapon_type <weaponType>", "удалить из коллекции все элементы, значение поля weaponType которого эквивалентно заданному");
         this.collectionManager = collectionManager;
     }
+
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try {

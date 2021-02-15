@@ -2,6 +2,9 @@ package commands;
 
 import java.util.Objects;
 
+/**
+ * Abstract Command class contains Object methods, name and description.
+ */
 public abstract class AbstractCommand {
     private String name;
     private String description;
@@ -13,10 +16,16 @@ public abstract class AbstractCommand {
 
     public abstract boolean execute(String argument);
 
+    /**
+     * @return Name and usage way of the command.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @return Description of the command.
+     */
     public String getDescription() {
         return description;
     }

@@ -2,6 +2,9 @@ package data;
 
 import java.util.Objects;
 
+/**
+ * Chapter with marines.
+ */
 public class Chapter {
     private String name;
     private String parentLegion;
@@ -11,10 +14,16 @@ public class Chapter {
         this.parentLegion = parentLegion;
     }
 
+    /**
+     * @return Name of the chapter.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @return ParentLegion of the chapter.
+     */
     public String getParentLegion() {
         return parentLegion;
     }

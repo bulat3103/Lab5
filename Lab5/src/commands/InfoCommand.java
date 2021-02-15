@@ -3,7 +3,6 @@ package commands;
 import exceptions.WrongAmountOfParametersException;
 import managers.CollectionManager;
 
-import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 
 public class InfoCommand extends AbstractCommand{
@@ -14,6 +13,10 @@ public class InfoCommand extends AbstractCommand{
         this.collectionManager = collectionManager;
     }
 
+    /**
+     * Executes the command.
+     * @return Command exit status.
+     */
     @Override
     public boolean execute(String argument) {
         try{

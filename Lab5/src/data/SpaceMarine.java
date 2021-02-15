@@ -3,6 +3,9 @@ package data;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+/**
+ * Main character. Is stored in the collection.
+ */
 public class SpaceMarine implements Comparable<SpaceMarine>{
     private int id;
     private String name;
@@ -26,38 +29,65 @@ public class SpaceMarine implements Comparable<SpaceMarine>{
         this.chapter = chapter;
     }
 
+    /**
+     * @return ID of the marine.
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @return Name of the marine.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @return Coordinates of the marine.
+     */
     public Coordinates getCoordinates() {
         return coordinates;
     }
 
+    /**
+     * @return Creation date of the marine.
+     */
     public LocalDateTime getCreationDate() {
         return creationDate;
     }
 
+    /**
+     * @return Health of the marine.
+     */
     public int getHealth() {
         return health;
     }
 
+    /**
+     * @return HeartCount of the marine.
+     */
     public Integer getHeartCount() {
         return heartCount;
     }
 
+    /**
+     * @return Achievements of the marine.
+     */
     public String getAchievements() {
         return achievements;
     }
 
+    /**
+     * @return Weapon type of the marine.
+     */
     public Weapon getWeaponType() {
         return weaponType;
     }
 
+    /**
+     * @return Chapter of the marine.
+     */
     public Chapter getChapter() {
         return chapter;
     }
